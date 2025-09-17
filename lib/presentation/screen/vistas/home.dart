@@ -29,13 +29,14 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(height: 20),
-            CircleAvatar(
-              radius: 80,
-              backgroundImage: NetworkImage(
-                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+            ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 150, maxHeight: 150),
+              child: Image(
+                image: NetworkImage(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                ),
               ),
             ),
             ConstrainedBox(

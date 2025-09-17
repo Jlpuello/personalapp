@@ -11,7 +11,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
-        title: Text("Aplicacion Personal v1.0", style: TextStyle(fontSize: 20)),
+        title: Row(
+          children: [
+            Icon(FontAwesomeIcons.user),
+            SizedBox(width: 10),
+            Text("PersonalAPP", style: TextStyle(fontSize: 20)),
+          ],
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -32,17 +38,16 @@ class HomeScreen extends StatelessWidget {
                 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text("Nombre: Juan Perez"),
-                Text("Edad: 30"),
-                Text("Profesión: Desarrollador Flutter"),
-                Text(
-                  "Descripción: Apasionado por la tecnología y el desarrollo de aplicaciones móviles.",
-                  textAlign: TextAlign.justify,
-                ),
-              ],
+            ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 300),
+              child: Column(
+                children: [
+                  Text("Nombre: Jorge Leonardo Puello Coneo"),
+                  Text("Edad: 31 años"),
+                  Text("Profesión: Desarrollador Flutter"),
+                  Text("Ingeniero en construccion"),
+                ],
+              ),
             ),
           ],
         ),

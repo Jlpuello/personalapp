@@ -56,7 +56,10 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          FilledButton(onPressed: () {}, child: Icon(FontAwesomeIcons.github)),
+          FloatingActionButton(
+            onPressed: () {},
+            child: Icon(FontAwesomeIcons.github),
+          ),
           SizedBox(width: 10),
           FloatingActionButton(
             onPressed: () {},
